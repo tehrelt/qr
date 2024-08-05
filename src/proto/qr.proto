@@ -1,0 +1,15 @@
+syntax="proto3"
+
+package qr
+
+service Generator{
+  rpc Generate(GenerateRequest)
+}
+
+message GenerateRequest {
+  string message = 1;
+}
+
+message GenerateResponse {
+  repeated bytes qrBytes = 1;
+}
